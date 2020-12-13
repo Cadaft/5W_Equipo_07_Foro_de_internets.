@@ -1,0 +1,455 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #000;
+}
+::-webkit-scrollbar{
+    width: 9px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, #00ff62);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent, #0380f5);
+
+}
+.Encabezado{
+    background: rgb(39, 39, 39);
+    height: 80px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: start;
+}
+
+.Encabezado::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    width:  100%;
+    height: calc(100% + 2px);
+    top:0px;
+    z-index: -1;
+    pointer-events: none;
+    animation: animate 1s linear infinite;
+}
+.Logo{
+    height: 80px;
+    width: 80px;
+    
+}
+.Logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;border-radius: 50%;
+}
+h2{
+    position: absolute;
+    top: 10px;
+}
+
+.BotonMenu{
+    left: 70%;
+    top: 11px;
+    margin-right: 10PX;
+    position: relative;
+    width: 160px;
+    height: 50px;
+    background: #000;
+    line-height: 48px;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    
+}
+.BotonMenu::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #fb0094, #00f, #0f0, #ff0, #f00,#fb0094, #00f, #0f0, #ff0, #f00 );
+    background-size: 400%;
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate 1s linear infinite;
+}
+.BotonMenu::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #fb0094, #00f, #0f0, #ff0, #f00,#fb0094, #00f, #0f0, #ff0, #f00 );
+    background-size: 400%;
+    opacity: 0;
+    filter: blur(20px);
+    transition: 0.5s;
+    animation: boton 20s linear infinite;
+}
+.BotonMenu:hover::before,
+.BotonMenu:hover::after{
+    opacity: 1;
+}
+@keyframes boton{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+
+}
+
+.BotonMenu span{
+    position: absolute;
+    display: block;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    text-align: center;
+    background: #0c0c0c;
+    color: rgba(225, 225, 225, 0.5);
+    z-index: 1;
+}
+.BotonMenu:hover span{
+    color: rgba(225, 225, 225, 1);
+}
+
+@keyframes animate
+        {
+            0%{
+                filter: blur(5px) hue-rotate(0deg) ;
+            }
+            100%{
+                filter: blur(5px) hue-rotate(360deg) ;
+            }
+        }
+@keyframes COMMENT
+        {
+            0%{
+                filter: blur(0px) hue-rotate(0deg) ;
+            }
+            100%{
+                filter: blur(0px) hue-rotate(360deg) ;
+            }
+        }
+.Cuerpo{
+    position: relative;
+    color: #000;
+    margin: auto;
+    top: 25px;
+    width: 75%;
+    padding: 15px;
+    background:  rgb(39, 39, 39, 0.5);
+}
+
+h1{
+    text-align: center;
+}
+.Neon{
+    position: relative;
+    top: 1em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0 20px;
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 0 0 20px #0380f5;
+}
+.Neon::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    color: #0380f5;
+    filter: blur(15px);
+}
+.Neon::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        background: #0380f5;
+        z-index: -2;
+        opacity: .5;
+        filter: blur(20px);
+}
+
+form{
+    margin-top: 80px;
+}
+.textarea{
+    width: 520px;
+    height: 100px;
+    position: relative;
+    background: rgb(39, 39, 39);
+    color: #fff;
+}
+.textarea::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+    width:  calc(100% + 2px);
+    height: calc(100% + 2px);
+    z-index: -1;
+    pointer-events: none;
+    animation: animate 1s linear infinite;
+}
+input{
+    height: 106px;
+    position: absolute;
+    margin: 0;
+    color: #fff;
+    background: rgb(39, 39, 39);
+}
+
+
+a {
+    color: #03658c;
+    text-decoration: none;
+}
+
+ul {
+   list-style-type: none;
+}
+
+body {
+   font-family: 'Roboto', Arial, Helvetica, Sans-serif, Verdana;
+}
+
+/** ====================
+* Lista de Comentarios
+=======================*/
+.comments-container {
+   margin: 60px auto 15px;
+   width: 768px;
+}
+
+.comments-container h1 {
+   font-size: 36px;
+   color: #283035;
+   font-weight: 400;
+}
+
+.comments-container h1 a {
+   font-size: 18px;
+   font-weight: 700;
+}
+
+.comments-list {
+   margin-top: 30px;
+   position: relative;
+}
+
+/**
+* Lineas / Detalles
+-----------------------*/
+.comments-list:before {
+   content: '';
+   width: 2px;
+   height: 100%;
+   position: absolute;
+   left: 72px;
+   top: 0;
+   background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+   pointer-events: none;
+   animation: COMMENT 1s linear infinite;
+
+}
+
+
+.comments-list:after {
+   content: '';
+   position: absolute;
+   background: #c7cacb;
+   bottom: 0;
+   left: 67px;
+   width: 7px;
+   height: 7px;
+   border: 3px solid #dee1e3;
+   border-radius: 50%;
+}
+
+.reply-list:before, .reply-list:after {display: none;}
+.reply-list li:before {
+   content: '';
+   width: 60px;
+   height: 2px;
+   background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+   pointer-events: none;
+   animation: COMMENT 1s linear infinite;
+   position: absolute;
+   top: 25px;
+   left: -55px;
+}
+
+
+.comments-list li {
+   margin-bottom: 15px;
+   display: block;
+   position: relative;
+}
+
+.comments-list li:after {
+   content: '';
+   display: block;
+   clear: both;
+   height: 0;
+   width: 0;
+}
+
+.reply-list {
+   padding-left: 88px;
+   clear: both;
+   margin-top: 15px;
+}
+/**
+* Avatar
+---------------------------*/
+.comments-list .comment-avatar {
+   width: 65px;
+   height: 65px;
+   position: relative;
+   float: left;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   border-radius: 4px;
+   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+   -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+   overflow: hidden;
+}
+
+
+.comments-list .comment-avatar img {
+   width: 100%;
+   height: 100%;
+}
+
+.reply-list .comment-avatar {
+   width: 50px;
+   height: 50px;
+}
+
+.comment-main-level:after {
+   content: '';
+   width: 0;
+   height: 0;
+   display: block;
+   clear: both;
+}
+/**
+* Caja del Comentario
+---------------------------*/
+.comments-list .comment-box {
+   width: 630px;
+   float: right;
+   position: relative;
+   box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+   color: #FFF;
+}
+
+.comments-list .comment-box:before, .comments-list .comment-box:after {
+   content: '';
+   height: 0;
+   width: 0;
+   position: absolute;
+   display: block;
+   border-width: 10px 12px 10px 0;
+   border-style: solid;
+   border-color: transparent rgb(39, 39, 39);
+   top: 8px;
+   left: -11px;
+}
+
+.comments-list .comment-box:before {
+   border-width: 11px 13px 11px 0;
+   border-color: transparent rgba(0,0,0,0.05);
+   left: -12px;
+}
+
+.reply-list .comment-box {
+   width: 560px;
+}
+.comment-box .comment-head {
+   background: rgb(39, 39, 39);
+   padding: 0;
+   border-bottom: 1px solid #E5E5E5;
+   overflow: hidden;
+   border-radius: 4px 4px 0 0;
+}
+
+
+
+.comment-box .comment-name {
+   color: #FFF;
+   font-size: 14px;
+   font-weight: 700;
+   float: left;
+   margin-right: 10px;
+}
+
+.comment-box .comment-name a {
+   color: #FFF;
+}
+
+.comment-box .comment-head span {
+   float: left;
+   color: #FFF;
+   font-size: 13px;
+   position: relative;
+   top: 1px;
+}
+
+.comment-box .comment-content {
+   background: rgb(39, 39, 39);
+   padding: 12px;
+   font-size: 15px;
+   color: #FFF;
+   border-radius: 0 0 4px 4px;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+/** =====================
+* Responsive
+========================*/
+@media only screen and (max-width: 1080px) {
+   .comments-container {
+       width: 420px;
+   }
+   
+   .textarea{
+       width: 420px;
+   }
+
+   .Encabezado{
+    width: 720px;
+   }
+   .Cuerpo{
+       width: 420px;
+   }
+
+   .comments-list .comment-box {
+       width: 290px;
+   }
+
+   .reply-list .comment-box {
+       width: 220px;
+   }
+}
